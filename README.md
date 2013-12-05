@@ -15,5 +15,5 @@ https://github.com/aldacron/Derelict3
 
 Running
 -------
-You will need CD32 game data in the ./bin/gamedata folder to run the game, and SDL2.dll in the ./bin folder.
+You will need CD32 game data in the ./bin/gamedata directory to run the game, and SDL2.dll in the ./bin directory.
 

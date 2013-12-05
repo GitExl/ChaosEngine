@@ -94,4 +94,3 @@ Project
 -------
 - Code review
 - Code documentation
-- GitHub
