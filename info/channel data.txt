@@ -1,0 +1,72 @@
+0x8137
+33079
+
+PAL timing
+1,4096836810788027274559861512675
+
+
+ChannelData layout
+00 W: base hardware register for this channel.
+04 W: ??
+
+23 B: bit 2: pattern is paused stopped??
+24 B: ??
+25 B: ??
+27 W: channel type or state??
+
+2c B: pattern index??
+2d B: pattern index??
+
+2e W: channel index
+52 L: absolute pointer to next pattern command?
+57 B: ??
+58 B: ??
+59 B: ??
+
+5a L: pointer to current isntrument?
+5c L: pointer to current instrument sample data.
+60 L: pointer to current instrument extra data (2nd waveform to modulate 1st with).
+64 L: pointer to current instrument unknown data.
+
+68 L: ??
+
+6c W: current instrument sample size
+6e W: current instrument loop start
+70 W: current instrument loop length
+72 W: ??
+74 L: size of current instrument extra sample data.
+78 L: pointer to something. set to 0 when instrument is set. current sample index??
+7c W: ?? always 1 when set from instrument data.
+7e L: ?? read from instrument (unknown5), 0 (W) in files. multiplied by 2 before stored as L.
+82 L: ?? set to 0 when instrument is set.
+86 W: ?? Something to do with the DMA control register.
+88 B: current instrument volume.
+8a W: ??
+8c W: multiplied with sample played back.
+8e W: ??
+
+90 B: bit 0: ???
+91 B: bit 0: ???
+
+Current note related?
+92 B: ??
+93 B: ??
+94 B: ??
+95 B: ??
+96 B: ??
+97 B: ??
+
+98 B: ??
+
+9a L: ?? Set directly from a pattern command.
+9e L: ?? Set to 0 directly by a pattern command.
+
+5a B: instrument value??
+
+a2 L: pointer to current instrument data?
+aa B: tempo value??
+ab B: previous command tempo value??
+ac B: instrument value??
+ad B: previous command instrument value??
+a6 L: absolute address of current pattern command.
+ae B: current instrument???
