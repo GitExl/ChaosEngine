@@ -80,7 +80,7 @@ final class Game {
         this.mChannels[2] = this.mMixer.allocateChannel(ChannelPosition.RIGHT);
         this.mChannels[3] = this.mMixer.allocateChannel(ChannelPosition.LEFT);
         this.mMixer.setGlobalVolume(0.2f);
-        this.mMixer.setCallback(delegate void(Mixer mixer) {
+        this.mMixer.setCallback(delegate void(Mixer mixer) nothrow {
             if (this.mCurrentSong is null) {
                 return;
             }
@@ -357,5 +357,9 @@ final class Game {
 
     public ref Rectangle getPlayArea() {
         return this.mPlayArea;
+    }
+
+    public void dumpTextures() {
+        this.mRender.dumpTextures();
     }
 }

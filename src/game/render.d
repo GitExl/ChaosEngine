@@ -219,4 +219,8 @@ class Render {
             currentX -= digitSize;
         }
     }
+
+    public void dumpTextures() {
+        this.mRenderer.dumpTextures();
+    }
 }

@@ -271,15 +271,15 @@ class RJPSong {
         }
     }
 
-    private float byteToVolume(const ubyte volume) {
+    private float byteToVolume(const ubyte volume) nothrow {
         return cast(float)volume * (1.0f / 64.0f);
     }
 
-    private float shortToVolume(const ushort volume) {
+    private float shortToVolume(const ushort volume) nothrow {
         return cast(float)volume * (1.0f / 64.0f);
     }
 
-    public void queueSubSong(const ubyte index) {
+    public void queueSubSong(const ubyte index) nothrow {
         this.mNextSubSong = index;
     }
 
@@ -296,9 +296,9 @@ class RJPSong {
         }
     }
 
-    public void startSubSong(const ubyte index) {
+    public void startSubSong(const ubyte index) nothrow {
         if (index < 0 || index >= this.mSubSongs.length) {
-            throw new Exception(format("Invalid subsong index %d.", index));
+            //writefln("Invalid subsong index %d.", index);
         }
 
         stop();
@@ -312,14 +312,14 @@ class RJPSong {
         startSequence(3, this.mSubSongs[index].sequences[3]);
     }
 
-    private void startSequence(const int channel, const int index) {
+    private void startSequence(const int channel, const int index) nothrow {
         // Null sequence, silence channel.
         if (index == 0) {
             this.mChannelStates[channel].active = false;
         
         // Invalid sequence.
         } else if (index < 0 || index >= this.mSequences.length) {
-            writefln("Invalid sequence index %d.", index);
+            //writefln("Invalid sequence index %d.", index);
             
             this.mChannelStates[channel].sequenceIndex = 0;
             this.mChannelStates[channel].sequencePatternIndex = 0;
@@ -337,7 +337,7 @@ class RJPSong {
         }
     }
 
-    private void setChannelPattern(const int index, const int patternIndex) {
+    private void setChannelPattern(const int index, const int patternIndex) nothrow {
         this.mChannelStates[index].patternIndex = patternIndex;
         this.mChannelStates[index].commandIndex = 0;
 
@@ -345,17 +345,17 @@ class RJPSong {
         this.mChannelStates[index].counter2 = 1;
     }
 
-    public void play(Mixer mixer) {
+    public void play(Mixer mixer) nothrow {
         this.mMixer = mixer;
     }
 
-    public void stop() {
+    public void stop() nothrow {
         for (int index; index < 4; index++) {
             this.mMixer.stop(index);
         }
     }
 
-    public void update() {
+    public void update() nothrow {
         foreach (int channelIndex, ref ChannelState channelState; this.mChannelStates) {
             if (channelState.active == false) {
                 continue;
@@ -379,7 +379,7 @@ class RJPSong {
         }
     }
 
-    private void runCommands(ref ChannelState channelState, int channelIndex) {
+    private void runCommands(ref ChannelState channelState, int channelIndex) nothrow {
         Command* command;
         bool executing;
 
@@ -473,7 +473,7 @@ class RJPSong {
                         break;
 
                     default:
-                        writefln("Unknown pattern command %d", command.instruction);break;
+                        //writefln("Unknown pattern command %d", command.instruction);break;
                 }
             }
         }

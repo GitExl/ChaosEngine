@@ -44,10 +44,10 @@ public struct Sample {
     }
 }
 
-public alias void delegate(Mixer mixer) MixerCallbackFunc;
+public alias void delegate(Mixer mixer) nothrow MixerCallbackFunc;
 
 
-extern(C) void audioCallback(void *userData, ubyte* data, int length) {
+extern(C) void audioCallback(void *userData, ubyte* data, int length) nothrow {
     Mixer mixer = cast(Mixer)userData;
     mixer.mix(cast(float[])data[0 .. length]);
 }
@@ -110,7 +110,7 @@ class Mixer {
         writefln("Set mixer callback at %d samples.", this.mCallbackInterval);
     }
 
-    public void mix(float[] output) {
+    public void mix(float[] output) nothrow {
         float bufferSample;
         float sample;
 
@@ -150,28 +150,28 @@ class Mixer {
         }
     }
 
-    public void playSample(const uint channelIndex, Sample* sample, const uint sampleRate) {
+    public void playSample(const uint channelIndex, Sample* sample, const uint sampleRate) nothrow {
         this.mChannels[channelIndex].sample = sample;
         this.mChannels[channelIndex].samplePosition = 0.0f;
         this.mChannels[channelIndex].sampleStep = cast(float)sampleRate / this.mSampleRate;
         this.mChannels[channelIndex].active = true;
     }
 
-    public void pause(const uint channelIndex) {
+    public void pause(const uint channelIndex) nothrow {
         this.mChannels[channelIndex].active = false;
     }
 
-    public void stop(const uint channelIndex) {
+    public void stop(const uint channelIndex) nothrow {
         this.mChannels[channelIndex].active = false;
         this.mChannels[channelIndex].sample = null;
         this.mChannels[channelIndex].samplePosition = 0.0f;
     }
 
-    public void resume(const uint channelIndex) {
+    public void resume(const uint channelIndex) nothrow {
         this.mChannels[channelIndex].active = true;
     }
 
-    public void setVolume(const uint channelIndex, const float volume) {
+    public void setVolume(const uint channelIndex, const float volume) nothrow {
         if (volume < 0.0f) {
             this.mChannels[channelIndex].volume = 0.0f;
         } else if (volume > 1.0f) {
@@ -181,11 +181,11 @@ class Mixer {
         }
     }
 
-    public ChannelPosition getPosition(const uint channelIndex) {
+    public ChannelPosition getPosition(const uint channelIndex) nothrow {
         return this.mChannels[channelIndex].position;
     }
 
-    public void setGlobalVolume(const float volume) {
+    public void setGlobalVolume(const float volume) nothrow {
         if (volume < 0.0f) {
             this.mVolume = 0.0f;
         } else if (volume > 1.0f) {

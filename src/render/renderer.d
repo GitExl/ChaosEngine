@@ -204,8 +204,10 @@ final class Renderer {
                 this.mTextures.put(texture);
             }
         }
+    }
 
-        //this.mTextures.dump();
+    public void dumpTextures() {
+        this.mTextures.dump();
     }
 
     public void setWorldTextures(TileSet tileSet) {

@@ -8,10 +8,12 @@
   <multiobj>0</multiobj>
   <singleFileCompilation>0</singleFileCompilation>
   <oneobj>0</oneobj>
+  <mscoff>0</mscoff>
   <trace>0</trace>
   <quiet>0</quiet>
   <verbose>0</verbose>
   <vtls>0</vtls>
+  <vgc>0</vgc>
   <symdebug>1</symdebug>
   <optimize>0</optimize>
   <cpu>0</cpu>
@@ -37,17 +39,21 @@
   <preservePaths>0</preservePaths>
   <warnings>1</warnings>
   <infowarnings>1</infowarnings>
-  <checkProperty>1</checkProperty>
+  <checkProperty>0</checkProperty>
   <genStackFrame>0</genStackFrame>
   <pic>0</pic>
   <cov>0</cov>
   <nofloat>0</nofloat>
   <Dversion>2</Dversion>
   <ignoreUnsupportedPragmas>0</ignoreUnsupportedPragmas>
+  <allinst>0</allinst>
+  <stackStomp>0</stackStomp>
   <compiler>0</compiler>
   <otherDMD>0</otherDMD>
+  <cccmd>$(CC) -c</cccmd>
+  <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>c:\mingw\import c:\derelict3\import</imppath>
+  <imppath>C:\Derelict\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -83,12 +89,13 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict3\lib\dmd\DerelictUtil.lib C:\Derelict3\lib\dmd\DerelictSDL2.lib</libfiles>
-  <libpaths>c:\derelict3\lib\dmd</libpaths>
+  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
+  <cRuntime>2</cRuntime>
   <additionalOptions />
   <preBuildCommand />
   <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName)_debug.exe&quot;</postBuildCommand>
@@ -102,10 +109,12 @@
   <multiobj>0</multiobj>
   <singleFileCompilation>0</singleFileCompilation>
   <oneobj>0</oneobj>
+  <mscoff>0</mscoff>
   <trace>0</trace>
   <quiet>0</quiet>
   <verbose>0</verbose>
   <vtls>0</vtls>
+  <vgc>0</vgc>
   <symdebug>0</symdebug>
   <optimize>1</optimize>
   <cpu>0</cpu>
@@ -131,17 +140,21 @@
   <preservePaths>0</preservePaths>
   <warnings>1</warnings>
   <infowarnings>1</infowarnings>
-  <checkProperty>1</checkProperty>
+  <checkProperty>0</checkProperty>
   <genStackFrame>0</genStackFrame>
   <pic>0</pic>
   <cov>0</cov>
   <nofloat>0</nofloat>
   <Dversion>2</Dversion>
   <ignoreUnsupportedPragmas>0</ignoreUnsupportedPragmas>
-  <compiler>1</compiler>
+  <allinst>0</allinst>
+  <stackStomp>0</stackStomp>
+  <compiler>0</compiler>
   <otherDMD>0</otherDMD>
+  <cccmd>$(CC) -c</cccmd>
+  <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>c:\derelict3\import</imppath>
+  <imppath>C:\Derelict\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -177,15 +190,16 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict3\lib\gdc\libDerelictUtil.a C:\Derelict3\lib\gdc\libDerelictSDL2.a</libfiles>
-  <libpaths>c:\derelict3\lib\gdc</libpaths>
+  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
+  <cRuntime>1</cRuntime>
   <additionalOptions />
   <preBuildCommand />
-  <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName)_release.exe&quot;</postBuildCommand>
+  <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName).exe&quot;</postBuildCommand>
   <filesToClean>*.obj;*.cmd;*.build;*.json;*.dep</filesToClean>
  </Config>
  <Config name="Profile" platform="Win32">
@@ -196,12 +210,14 @@
   <multiobj>0</multiobj>
   <singleFileCompilation>0</singleFileCompilation>
   <oneobj>0</oneobj>
+  <mscoff>0</mscoff>
   <trace>1</trace>
   <quiet>0</quiet>
   <verbose>0</verbose>
   <vtls>0</vtls>
+  <vgc>0</vgc>
   <symdebug>1</symdebug>
-  <optimize>1</optimize>
+  <optimize>0</optimize>
   <cpu>0</cpu>
   <isX86_64>0</isX86_64>
   <isLinux>0</isLinux>
@@ -217,25 +233,29 @@
   <useIn>0</useIn>
   <useOut>0</useOut>
   <useArrayBounds>0</useArrayBounds>
-  <noboundscheck>1</noboundscheck>
+  <noboundscheck>0</noboundscheck>
   <useSwitchError>0</useSwitchError>
   <useUnitTests>0</useUnitTests>
-  <useInline>1</useInline>
+  <useInline>0</useInline>
   <release>1</release>
   <preservePaths>0</preservePaths>
   <warnings>1</warnings>
   <infowarnings>1</infowarnings>
-  <checkProperty>1</checkProperty>
+  <checkProperty>0</checkProperty>
   <genStackFrame>0</genStackFrame>
   <pic>0</pic>
   <cov>0</cov>
   <nofloat>0</nofloat>
   <Dversion>2</Dversion>
   <ignoreUnsupportedPragmas>0</ignoreUnsupportedPragmas>
-  <compiler>2</compiler>
+  <allinst>0</allinst>
+  <stackStomp>0</stackStomp>
+  <compiler>0</compiler>
   <otherDMD>0</otherDMD>
+  <cccmd>$(CC) -c</cccmd>
+  <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>c:\derelict3\import</imppath>
+  <imppath>C:\Derelict\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -271,12 +291,13 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict3\lib\DerelictUtil.lib C:\Derelict3\lib\DerelictSDL2.lib</libfiles>
-  <libpaths>c:\derelict3\lib</libpaths>
+  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
+  <cRuntime>1</cRuntime>
   <additionalOptions />
   <preBuildCommand />
   <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName)_profile.exe&quot;</postBuildCommand>

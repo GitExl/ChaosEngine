@@ -1,6 +1,7 @@
 module render.texturemanager;
 
 import std.stdio;
+import std.file;
 
 import derelict.sdl2.sdl;
 
@@ -48,6 +49,10 @@ final class TextureManager {
     }
 
     public void dump() {
+        if (!exists("textures")) {
+            mkdir("textures");
+        }
+        
         foreach (ref Texture texture; this.mTextures.values) {
             texture.writeTo("textures/" ~ texture.getName() ~ ".bmp");
         }
