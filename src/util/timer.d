@@ -29,14 +29,17 @@ final class Timer {
         this.mDelayTime = getCounter() - this.mDelayStart;
 
         // If the thread was suspended too long, wait less next time.
-        // TODO: go the other way as well.
-        if (this.mDelayTime >= delay) {
-            this.mFudge += 10;
+        if (this.mDelayTime > delay) {
+            this.mFudge += 50;
+		} else if (this.mDelayTime < delay) {
+			this.mFudge -= 25;
 
         // Busywait the remaining period.
-        } else if (this.mDelayTime < delay) {
+        } else {
             this.mDelayStart = getCounter();
-            while(getCounter() - this.mDelayStart < delay - this.mDelayTime) {}
+            while(getCounter() - this.mDelayStart < delay - this.mDelayTime) {
+				SDL_Delay(0);
+			}
         }
     }
 
