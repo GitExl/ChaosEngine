@@ -1,7 +1,7 @@
 module data.text;
 
 
-static string TEXT_DATA[] = [
+static string[] TEXT_DATA = [
     // World names.
     "The Forest",
     "The Workshops",

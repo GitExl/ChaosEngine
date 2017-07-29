@@ -41,7 +41,7 @@ alias void delegate(Tile* tile, const int tileX, const int tileY) TileIterateFun
 
 
 final class TileMap {
-	private Tile mTiles[];
+	private Tile[] mTiles;
 
 	private int mWidth;
 	private int mHeight;

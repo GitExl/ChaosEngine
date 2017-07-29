@@ -69,7 +69,7 @@ final class Game {
 
     this() {
         this.mPlayers = new Player[2];
-        initializePlayer(0, CharacterIndex.GENTLEMAN);
+        initializePlayer(0, CharacterIndex.MERCENARY);
         initializePlayer(1, CharacterIndex.NAVVIE);
         this.mConsolePlayer = &this.mPlayers[0];
 
@@ -131,7 +131,7 @@ final class Game {
     }
 
     public void loop() {
-        bool keys[320];
+        bool[320] keys;
         SDL_Event event;
         
         Timer timer = new Timer();

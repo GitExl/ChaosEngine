@@ -14,7 +14,7 @@
   <verbose>0</verbose>
   <vtls>0</vtls>
   <vgc>0</vgc>
-  <symdebug>1</symdebug>
+  <symdebug>2</symdebug>
   <optimize>0</optimize>
   <cpu>0</cpu>
   <isX86_64>0</isX86_64>
@@ -25,7 +25,7 @@
   <isSolaris>0</isSolaris>
   <scheduler>0</scheduler>
   <useDeprecated>0</useDeprecated>
-  <errDeprecated>1</errDeprecated>
+  <errDeprecated>0</errDeprecated>
   <useAssert>0</useAssert>
   <useInvariants>0</useInvariants>
   <useIn>0</useIn>
@@ -53,7 +53,7 @@
   <cccmd>$(CC) -c</cccmd>
   <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>C:\Derelict\source</imppath>
+  <imppath>C:\Derelict\DerelictUtil\source C:\Derelict\DerelictSDL2\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -89,13 +89,14 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libfiles>C:\Derelict\DerelictUtil\lib\DerelictUtil.lib C:\Derelict\DerelictSDL2\lib\DerelictSDL2.lib</libfiles>
   <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
   <cRuntime>2</cRuntime>
+  <privatePhobos>0</privatePhobos>
   <additionalOptions />
   <preBuildCommand />
   <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName)_debug.exe&quot;</postBuildCommand>
@@ -126,7 +127,7 @@
   <isSolaris>0</isSolaris>
   <scheduler>0</scheduler>
   <useDeprecated>0</useDeprecated>
-  <errDeprecated>1</errDeprecated>
+  <errDeprecated>0</errDeprecated>
   <useAssert>0</useAssert>
   <useInvariants>0</useInvariants>
   <useIn>0</useIn>
@@ -154,7 +155,7 @@
   <cccmd>$(CC) -c</cccmd>
   <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>C:\Derelict\source</imppath>
+  <imppath>C:\Derelict\DerelictUtil\source C:\Derelict\DerelictSDL2\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -190,13 +191,14 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libfiles>C:\Derelict\DerelictUtil\lib\DerelictUtil.lib C:\Derelict\DerelictSDL2\lib\DerelictSDL2.lib</libfiles>
   <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
   <cRuntime>1</cRuntime>
+  <privatePhobos>0</privatePhobos>
   <additionalOptions />
   <preBuildCommand />
   <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName).exe&quot;</postBuildCommand>
@@ -227,7 +229,7 @@
   <isSolaris>0</isSolaris>
   <scheduler>0</scheduler>
   <useDeprecated>0</useDeprecated>
-  <errDeprecated>1</errDeprecated>
+  <errDeprecated>0</errDeprecated>
   <useAssert>0</useAssert>
   <useInvariants>0</useInvariants>
   <useIn>0</useIn>
@@ -255,7 +257,7 @@
   <cccmd>$(CC) -c</cccmd>
   <ccTransOpt>1</ccTransOpt>
   <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
-  <imppath>C:\Derelict\source</imppath>
+  <imppath>C:\Derelict\DerelictSDL2\source C:\Derelict\DerelictUtil\source</imppath>
   <fileImppath />
   <outdir>$(ConfigurationName)</outdir>
   <objdir>$(OutDir)</objdir>
@@ -291,13 +293,14 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>C:\Derelict\lib\DerelictUtil.lib C:\Derelict\lib\DerelictSDL2.lib</libfiles>
+  <libfiles>C:\Derelict\DerelictUtil\lib\DerelictUtil.lib C:\Derelict\DerelictSDL2\lib\DerelictSDL2.lib</libfiles>
   <libpaths>c:\derelict\lib</libpaths>
   <deffile />
   <resfile />
   <exefile>$(OutDir)\$(ProjectName).exe</exefile>
   <useStdLibPath>1</useStdLibPath>
   <cRuntime>1</cRuntime>
+  <privatePhobos>0</privatePhobos>
   <additionalOptions />
   <preBuildCommand />
   <postBuildCommand>copy &quot;$(OutDir)\$(ProjectName).exe&quot; &quot;$(OutDir)\..\bin\$(ProjectName)_profile.exe&quot;</postBuildCommand>

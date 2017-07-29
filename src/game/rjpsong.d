@@ -59,7 +59,7 @@ public struct Instrument {
 }
 
 private struct SubSong {
-    ubyte sequences[4];
+    ubyte[4] sequences;
 }
 
 private struct Sequence {

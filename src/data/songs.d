@@ -17,7 +17,7 @@ static const SongInfo[] SONGS_INFO = [
     {"outro",  "shop1.sng",    ["shop.ins", "shop1.ins"]},
 ];
 
-static const ubyte SUBSONG_MAPPINGS[][] = [
+static const ubyte[][] SUBSONG_MAPPINGS = [
     [18, 14, 5, 13, 7, 4, 16, 10, 10, 16, 15, 6, 6, 9, 9, 8],
     [4, 5, 10, 11, 14, 14, 14, 14, 4, 5, 10, 11, 14, 14, 14, 14],
     [7, 4, 11, 16, 27, 16, 16, 16, 7, 4, 11, 16, 27, 16, 16, 16],
